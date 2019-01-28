@@ -1,6 +1,7 @@
 <?php
 
 include_once 'Zaposlenik.php';
+include_once 'functions.php';
 
 
 $zaposlenici [] = array();
@@ -20,11 +21,15 @@ for (; ;) {
 
     switch ($unos) {
         case 1;
-            echo '';
+
             break;
 
         case 2;
-            echo '';
+            if (empty($zaposlenici[0])) {
+                $zaposlenici[0] = unos();
+            } else {
+                $zaposlenici[] = unos();
+            }
             break;
 
         case 3;
@@ -63,9 +68,9 @@ for (; ;) {
                         echo '';
                         break;
 
-                       default;
-                       echo 'Pogrešan unos';
-                       break;
+                    default;
+                        echo 'Pogrešan unos';
+                        break;
                 }
 
 
