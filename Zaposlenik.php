@@ -1,7 +1,6 @@
 <?php
 
 
-
 //Kreiranje klase zaposlenik
 class Zaposlenik
 {
@@ -14,12 +13,12 @@ class Zaposlenik
     private $mjesecnaPrimanja;
 
 
-
     function __construct()
     {
-
+        $this->id = SingletoneId::getInstance();
     }
 // Dodavanje metoda
+
     /**
      * @return mixed
      */
@@ -48,4 +47,19 @@ class Zaposlenik
     {
 
     }
+}
+
+class SingletoneId
+{
+    protected static $id = 0;
+
+    public static function getInstance()
+    {
+        if (!isset(self::$id)) {
+            self::$id = new self();
+        }
+        self::$id++;
+        return self::$id;
+    }
+
 }

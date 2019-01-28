@@ -21,7 +21,7 @@ for (; ;) {
 
     switch ($unos) {
         case 1;
-
+            dohvatiSveZaposlenike($zaposlenici);
             break;
 
         case 2;
