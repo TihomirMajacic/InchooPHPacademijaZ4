@@ -36,9 +36,43 @@ for (; ;) {
             break;
 
         case 5;
-            echo '';
-            break;
+            for (; ;) {
+                echo "
+                1. Ukupna starost\n
+                2. Prosječna starost\n
+                3. Ukupna primanja\n
+                4. Prosječna primanja\n
+                ";
+                echo 'Unesi 1-4: ';
+                $unos = readline();
 
+                switch ($unos) {
+                    case 1;
+                        echo '';
+                        break;
+
+                    case 2;
+                        echo '';
+                        break;
+
+                    case 3;
+                        echo '';
+                        break;
+
+                    case 4;
+                        echo '';
+                        break;
+
+                       default;
+                       echo 'Pogrešan unos';
+                       break;
+                }
+
+
+            }
+            break;
+        default:
+            echo 'Pogrešan unos';
 
     }
 }
